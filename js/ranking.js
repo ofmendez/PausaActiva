@@ -43,8 +43,8 @@ window.Reload = ()=>{
     })
 }
 
-// let socket = new WebSocket("ws://localhost:8888/admin");
 // let socket = new WebSocket("ws://rds-la.com:8888/admin");
+// let socket = new WebSocket("ws://localhost:8888/admin");
 let socket = new WebSocket("ws://rds-la.com:8888/");
 
 window.Next = ()=>{

@@ -13,24 +13,24 @@ let totalErrors = 0
 
 let totalPoints = 0
 let pointsBySuccess = 100
-let timeByAns = 5
+let timeByAns = 25
 let timeleft = timeByAns-1
 let userID = ''
 window.views = views
 let aviableQuestions = 1
+let vid
 
 // views.GoTo("Wellcome")
 views.GoTo("Registro")   
-views.GoTo("Instrucciones02") .then(()=>{
-    window.GoToLobby();
-    window.GoToLobby();
-})   
+// views.GoTo("Instrucciones02") .then(()=>{
+//     window.GoToLobby();
+//     window.GoToLobby();
+// })   
 // GoRanking()
 
 
 // let socket = new WebSocket("ws://rds-la.com:8888/");
 let socket = new WebSocket("ws://localhost:8888/");
-
 
 
 socket.onmessage = function(event) {
@@ -46,8 +46,9 @@ socket.onmessage = function(event) {
 function EnableQuestionTil(id) {
     aviableQuestions =id
     let questionBtns = document.getElementsByClassName('questionBtn')
-    for (let i = 0; i < Questions.length; i++) 
-        questionBtns[i].hidden = i >= id
+    if(questionBtns.length > 0)
+        for (let i = 0; i < Questions.length; i++) 
+            questionBtns[i].hidden = i >= id
 } 
 
 window.TryLogin = (form)=>{
@@ -75,7 +76,7 @@ window.TryLogin = (form)=>{
 window.GoToLobby = ()=>{
     socket.send(userID+"( 1 ) llegó al Lobby");
     SetLobby();
-    loadDataFile("json").then((res)=>{
+    loadDataFile("txt").then((res)=>{
         Questions = res[0].Questions;
     });
 }
@@ -135,10 +136,22 @@ const GoQuestion = (qId)=>{
     views.GoTo("PreguntaVertical").then((res)=>{
         SetQuestionAndAnswers(Questions[qId]);
         SetPowerUp5050(Questions[qId])
-        RunTimer(Questions[qId])
-    });
-}
+        console.log("PArce", qId);
+        if(qId == 1)
+            RegisterAudio(qId)
+        else
+            RunTimer(Questions[qId])
+        });
+    }
 
+function RegisterAudio(qId) {
+    console.log("ENTRA");
+    vid = document.getElementById("myAudio");
+    vid.hidden =false;
+    vid.onplay = function() {
+        RunTimer(Questions[qId])
+    };
+}
 
 //////////////////////////////////////////////////////////////////////
 

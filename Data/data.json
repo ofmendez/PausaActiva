@@ -3,130 +3,130 @@
         "Questions":[
             {
                 "id": "0",
-                "statement": "¿Con qué plataforma de SIEM podemos integrar nuestra aplicación?",
+                "statement": "En anatomía, la palabra AGONISTA se refiere a: ",
                 "Answers":[
                     {
                         "id":"0",
-                        "text":"Splunk",
+                        "text":"Parte del cuerpo en desuso.",
                         "isCorrect": false 
                     },
                     {
                         "id":"1",
-                        "text":"Qradar",
+                        "text":"Longitud de un vaso sanguineo.",
                         "isCorrect": false 
                     },
                     {
                         "id":"2",
-                        "text":"SIEM",
-                        "isCorrect": false 
+                        "text":"Músculo que efectúa determinado movimiento.",
+                        "isCorrect": true 
                     },
                     {
                         "id":"3",
-                        "text":"Cualquiera del mercado",
-                        "isCorrect": true 
+                        "text":"Peso del agua corporal.",
+                        "isCorrect": false 
                     }
                 ]
             },
             {
                 "id": "1",
-                "statement": "¿Cómo se llama nuestro módulo de amenazas avanzadas?",
+                "statement": "¿Quién canta?",
                 "Answers":[
                     {
                         "id":"0",
-                        "text":"TRAP",
+                        "text":"Jose Luis Perales",
                         "isCorrect": false 
                     },
                     {
                         "id":"1",
-                        "text":"TAP",
+                        "text":"Jose Feliciano",
                         "isCorrect": true 
                     },
                     {
                         "id":"2",
-                        "text":"Information Protection",
+                        "text":"Armando Manzanero",
                         "isCorrect": false 
                     },
                     {
                         "id":"3",
-                        "text":"Ninguno de los anteriores",
+                        "text":"José José",
                         "isCorrect": false 
                     }
                 ]
             },
             {
                 "id": "2",
-                "statement": "¿Qué engine bloquea correo malicioso en la conexión?",
+                "statement": "Red Design Systems tiene cuenta en Twitter ¿Cuál es el nombre de la cuenta?",
                 "Answers":[
                     {
                         "id":"0",
-                        "text":"Listas negras",
-                        "isCorrect": false 
+                        "text":"@Redsyscorp",
+                        "isCorrect": true 
                     },
                     {
                         "id":"1",
-                        "text":"Reglas en email firewall",
+                        "text":"@RedDesignSystems",
                         "isCorrect": false 
                     },
                     {
                         "id":"2",
-                        "text":"Reputación (PDR)",
-                        "isCorrect": true 
+                        "text":"@RDS_LA",
+                        "isCorrect": false 
                     },
                     {
                         "id":"3",
-                        "text":"Impostor",
+                        "text":"@rds",
                         "isCorrect": false 
                     }
                 ]
             },
             {
                 "id": "3",
-                "statement": "¿Cómo se llama el módulo que revisa el cumplimiento de normativas?",
+                "statement": "El corazón de un adulto da 60 a 100 latidos por minuto, Pero en un atleta bien entrenado:",
                 "Answers":[
                     {
                         "id":"0",
-                        "text":"Email Protection",
+                        "text":"Da  70-110  latidos por minuto.(En reposo)",
                         "isCorrect": false 
                     },
                     {
                         "id":"1",
-                        "text":"Email Encryption",
-                        "isCorrect": false 
-                    },
-                    {
-                        "id":"2",
-                        "text":"Information Protection",
+                        "text":"Da  40-60  latidos por minuto.(En reposo)",
                         "isCorrect": true 
                     },
                     {
+                        "id":"2",
+                        "text":"Da  80-120  latidos por minuto.(En reposo)",
+                        "isCorrect": false 
+                    },
+                    {
                         "id":"3",
-                        "text":"Targeted Attack Protection",
+                        "text":"Da  90-160  latidos por minuto.(En reposo)",
                         "isCorrect": false 
                     }
                 ]
             },
             {
                 "id": "4",
-                "statement": "¿Con qué fabricantes se integra la solución presentada?",
+                "statement": "Para terminar, Resultado de:  12 x 6 ",
                 "Answers":[
                     {
                         "id":"0",
-                        "text":"CyberArk",
+                        "text":"48",
                         "isCorrect": false 
                     },
                     {
                         "id":"1",
-                        "text":"Palo Alto Networks",
+                        "text":"82",
                         "isCorrect": false 
                     },
                     {
                         "id":"2",
-                        "text":"SailPoint",
+                        "text":"62",
                         "isCorrect": false 
                     },
                     {
                         "id":"3",
-                        "text":"Todas las alternativas",
+                        "text":"72",
                         "isCorrect": true 
                     }
                 ]

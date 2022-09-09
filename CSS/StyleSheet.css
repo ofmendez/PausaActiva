@@ -201,12 +201,12 @@ select {
 /* Pagina Preguntas */
 .EstiloPregunta {
 	font-family: Montserrat;
-	font-size: 1.6vh;
+	font-size: 2.2vh;
 	padding: 1vh 2vh;
 	text-align: center;
 	background-size: 200% auto;
-	background-image: linear-gradient(#662481 0%, #755fa6 100%);
-	border: 0.5vh solid #dd5cff;
+	background-image: linear-gradient(#701818 0%, #6b3030 100%);
+	border: 0.5vh solid #ff5c5c;
 	color: #fff;
 	border-radius: 100px;
 }
@@ -215,32 +215,32 @@ select {
 	color: white;
 	padding: 1vh 2vh;
 	border-radius: 50px;
-	background-color: #013b58;
+	background-color: #092a39;
 	font-family: Montserrat;
-	font-size: 2vh;
+	font-size: 1.8vh;
 	position: relative;
 	cursor: pointer;
 }
 .RespuestaCorrecta {
 	font-family: Montserrat;
-	font-size: 2vh;
+	font-size: 1.8vh;
 	padding: 1vh 2vh;
 	text-align: center;
 	background-size: 200% auto;
-	background-image: linear-gradient(#eb919a 0%, #d04755 100%);
-	border: 5px solid #eb919a;
+	background-image: linear-gradient(#7dd9ce 0%, #227843 100%);
+	border: 5px solid #32724e;
 	color: #fff;
 	border-radius: 100px;
 }
 
 .RespuestaIncorrecta {
 	font-family: Montserrat;
-	font-size: 2vh;
+	font-size: 1.8vh;
 	padding: 1vh 2vh;
 	text-align: center;
 	background-size: 200% auto;
 	background-image: linear-gradient(#eb5a67 0%, #bf0020 100%);
-	border: 0.5vh solid #ff5c61;
+	border: 0.5vh solid #861d13;
 	color: #fff;
 	border-radius: 100px;
 }
