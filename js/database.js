@@ -27,7 +27,7 @@ const getDB = function (){
 export function getUserData() {
     return new Promise((resolve,reject)=>{
         getDB().then((db)=>{
-            const starCountRef = ref(db, '/users');
+            const starCountRef = ref(db, '/usersRDS');
             onValue(starCountRef, (snapshot) => {
                 resolve(snapshot.val())
             }, {
@@ -43,7 +43,18 @@ export function updateScore(userId, newScore) {
     return new Promise((resolve,reject)=>{
         getDB().then((db)=>{
             const updates = {};
-            updates['/users/' + userId+'/score'] = newScore;
+            updates['/usersRDS/' + userId+'/score'] = newScore;
+            update(ref(db), updates).then(()=>{
+                resolve("Updated!! ")
+            });
+        }).catch((e)=> reject("error getDB: "+e))
+    });
+}
+export function updateQuestion(userId, qId, pts) {
+    return new Promise((resolve,reject)=>{
+        getDB().then((db)=>{
+            const updates = {};
+            updates['/usersRDS/' + userId+'/p'+qId] = pts;
             update(ref(db), updates).then(()=>{
                 resolve("Updated!! ")
             });
@@ -54,20 +65,17 @@ export function updateScore(userId, newScore) {
 export function DeleteUser(userId) {
     return new Promise((resolve,reject)=>{
         getDB().then((db)=>{
-            set(ref(db, 'users/' + userId),  null ).then((res)=> resolve("DELETED!!"));
+            set(ref(db, 'usersRDS/' + userId),  null ).then((res)=> resolve("DELETED!!"));
         }).catch((e)=> reject("error getDB: "+e))
     });
 }
 
 
-export function createUserData(userId, email, name, company, acceptAssesment) {
+export function createUserData(userId,  name) {
     return new Promise((resolve,reject)=>{
         getDB().then((db)=>{
-            set(ref(db, 'users/' + userId), {
+            set(ref(db, 'usersRDS/' + userId), {
                 username: name,
-                email: email,
-                company: company,
-                acceptAssesment: acceptAssesment,
                 score : 0
             }).then((res)=> resolve("writted"));
         }).catch((e)=> reject("error getDB: "+e))

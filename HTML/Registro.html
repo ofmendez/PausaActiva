@@ -1,51 +1,31 @@
-<img src="Images/Fondo.jpg" id="background-video" alt="">
-
-<div class="ImagenLogoSuperior">
-   <img src="Images/Logo.svg" />
+<div id="background-video"></div>
+<div
+   style="padding: 2vh; background-color:#4b4e55; border-bottom-left-radius: 150px 150px;border-bottom-right-radius: 150px 150px;"
+   class="ImagenLogoSuperior">
+   <img width="1080" height="60" src="Images/LogoRDS.svg" />
 </div>
-<div class="FondoTrasparenciaBarco">
-   <div style="height:18vh;"></div>
-   <h2>REGISTRO</h2>
+<div class="">
+   <div style="height:10vh;"></div>
+   <h2>PRIMERO TU NOMBRE O APODO</h2>
    <div style="height:40vh;"></div>
 </div>
 <div style="position:absolute; bottom:-3px; width:100%; ">
    <img src="Images/BordeCurva.svg" class="CurvaSeccion" />
-   <div class="CuerpoContenido" style="background-color:#013b58; margin-top:-1vh;">
+   <div class="CuerpoContenido" style="background-color:#4b4e55; margin-top:-1vh;">
       <div style="height:2vh;"></div>
       <form onsubmit="return TryLogin(this)" action="#" >
          <p>
-            <input type="text" placeholder="NOMBRE COMPLETO" id="idNombreCompleto" name="nombreJugador" required minlength="4" maxlength="50">
+            <input type="text" placeholder="NOMBRE.." id="idNombreCompleto" name="nombreJugador" required minlength="4" maxlength="50">
          </p>
-         <div style="height:3vh;"></div>
+         <div style="height:6vh;"></div>
          <p>
-            <input type="text" placeholder="EMPRESA" id="idEmpresa" name="empresa" required minlength="4" maxlength="50">
-         </p>
-         <div style="height:3vh;"></div>
-         <p>
-            <input type="email" placeholder="CORREO CORPORATIVO" id="idCorreo" name="mailJugador" required minlength="4" maxlength="80">
-         </p>
-         <div style="height:3vh;"></div>
-         <p class="TextoParrafo" style="text-align: left;">
-            ¿Desea ser contactado para realizar un assessment de seguridad?
-         </p>
-            <div style="height:1vh;"></div>
-            <p>
-
-               <select required class="Desplegable" id="idAssesment" style="width: 100%; height:7.8vh;">
-                  <option value="" disabled selected hidden>ELIJA UNA OPCIÓN</option>
-                  <option>Si</option>
-                  <option>No</option>
-               </select>
-            </p>
-         <div style="height:3vh;"></div>
-         <p>
-            <button type="submit"class="BotonGradiente" style="min-width: 25vh;">
+            <button id="btnFormLogin" type="submit"class="BotonGradiente" style="min-width: 20vh;">
                Ingresar
                <!-- <a href="javascript:TryLogin()" ></a> -->
             </button>
          </p>
       </form>
-      <div style="height:9vh;"></div>
+      <div style="height:15vh;"></div>
    </div>
 </div>
 

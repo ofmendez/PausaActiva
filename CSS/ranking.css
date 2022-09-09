@@ -13,18 +13,31 @@
 body {
     background-color:#262922;
 }
-button{
+button {
     font-family: 'Montserrat-Bold';
 	font-weight: 800;
 	font-size: 2vh;
 	padding: 5px 15px;
 	text-align: center;
-	background-image: linear-gradient(#000000 0%, #4C1D62 100%);
-	border: 5px solid #621d34;
-	color: red;
+	background-image: linear-gradient(black 0%, #d04755 100%);
+	border: 5px solid #d04755;
+	color: white;
 	cursor: pointer;
 	border-radius: 100px;
 }
+input {
+    margin-right: 2vh;
+    font-family: 'Montserrat-Bold';
+	font-weight: 800;
+	font-size: 2vh;
+	padding: 5px 15px;
+	text-align: left;
+	background-image: linear-gradient(black 0%, #d04755 100%);
+	color: white;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
 
 #TablaUsuariosRegistrados {
     border-collapse: collapse;
@@ -37,7 +50,7 @@ button{
 }
 
 #TablaUsuariosRegistrados thead tr {
-    background-color: #4C1D62;
+    background-color: #d04755;
     color: white;
     text-align: left;
 }
@@ -58,12 +71,12 @@ button{
 }
 
 #TablaUsuariosRegistrados tbody tr:last-of-type {
-    border-bottom: 2px solid #4C1D62;
+    border-bottom: 2px solid #d04755;
 }
 
 #TablaUsuariosRegistrados tbody tr.active-row {
     font-weight: bold;
-    color: #4C1D62;
+    color: #d04755;
 }
 
 button[type="checkbox"] {

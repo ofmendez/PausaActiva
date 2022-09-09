@@ -1,5 +1,5 @@
 import {getUserData, DeleteUser} from "./database.js";
-import {emailToId} from './utils.js'
+import {nameToId, ñ} from './utils.js'
 
 // populate table with new data
 function updateTable(users, values) {
@@ -12,17 +12,7 @@ function updateTable(users, values) {
         p += "<tr>";
         p += `<td>${id++}</td>`;
             values.forEach(value => {
-                if (value === 'acceptAssesment'){
-                    if( user[value] ==="Si"){
-                        p += "<td>Si</td>";
-                        p += "<td>&nbsp;</td>";
-                    }else{
-                        p += "<td>&nbsp;</td>";
-                        p += "<td>No</td>";
-                    }
-                    return;
-                } 
-                p += "<td>" + user[value] + "</td>";
+                p += "<td>" + (user[value] !== undefined?user[value]:"-" ) + "</td>";
             })
         // p += `<td><button onclick="Delete('${user["email"]}')">DELETE!</button></td>`;
         p += "</tr>";
@@ -32,8 +22,8 @@ function updateTable(users, values) {
 }
 
 window.Delete = (email)=>{
-    DeleteUser(emailToId( email)).then((res)=>{
-        console.log("Borrado!: ",emailToId( email));
+    DeleteUser(nameToId( email)).then((res)=>{
+        console.log("Borrado!: ",nameToId( email));
         Reload()
     }).catch((e)=>console.log("Problema borrando: "+e));
 }
@@ -41,21 +31,26 @@ window.Delete = (email)=>{
 window.Reload = ()=>{
     getUserData().then((usrObj)=>{
         let users = []
-        let usersYes = []
         for (const u in usrObj) 
             if (usrObj.hasOwnProperty(u)) 
                 users.push(usrObj[u]);
-            
+        ñ('#titleTable').hidden = !(users.length > 0)
         
         users.sort((a, b) => { return b.score - a.score; });
-        document.getElementById('countYes').innerHTML =`(${users.filter(u => u.acceptAssesment === "Si").length})`
-        document.getElementById('countNo').innerHTML =`(${users.filter(u => u.acceptAssesment === "No").length})`
         console.log("da: ",users.length);
-        updateTable(users, ['acceptAssesment','username', 'email', 'score', 'company']);
+        updateTable(users, ['username', 'p0','p1','p2','p3','p4','score']);
         
     })
 }
 
+// let socket = new WebSocket("ws://localhost:8888/admin");
+// let socket = new WebSocket("ws://rds-la.com:8888/admin");
+let socket = new WebSocket("ws://rds-la.com:8888/");
+
+window.Next = ()=>{
+    socket.send(ñ('#command').value);
+}
+/*
 function example() {
     // fetch initial data and populate table
     fetch("https://2k03zcp0bd.execute-api.us-east-1.amazonaws.com/ninjas", {
@@ -71,3 +66,4 @@ function example() {
         });
     });
 }
+*/

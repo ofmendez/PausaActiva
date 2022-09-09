@@ -13,36 +13,34 @@
 
 </head>
 
-<body>
+<body style="margin-left: 5vh;">
     <!-- <input type="checkbox" id="modal">
 <label for="modal" class="example-label">Open Modal</label>
 <label for="modal" class="modal-background"></label> -->
-        <button type="checkbox" id="modal"> MODAL</button>
+    <!-- <button type="checkbox" id="modal"> MODAL</button> -->
+    <div style="height:12vh;"></div>
     <table id="TablaUsuariosRegistrados" align="center" border="1">
-        <button onclick="Reload()">RELOAD! </button>
-        <thead>
+        <input id="command" >   </input>
+        <button onclick="window.Next()">Siquiente!  </button>
+        <br>
+        <br>
+        <button onclick="window.Reload()">Actualizar </button>
+        <thead hidden id="titleTable" >
             <tr>
                 <th>Id</th>
-                <th><span>Si</span><br/> <span id="countYes"></span></th>
-                <th><span>No</span><br/> <span id="countNo" ></span></th>
                 <th>Nombre</th>
-                <th>Correo</th>
-                <th>Puntaje</th>
-                <th>Empresa</th>
+                <th>P1</th>
+                <th>P2</th>
+                <th>P3</th>
+                <th>P4</th>
+                <th>P5</th>
+                <th>Total</th>
             </tr>
         </thead>
         <tbody id="t">
         </tbody>
     </table>
 
-    <!-- <div class="modal">
-        <div class="modal-header">
-            <h3>Modal Title</h3>
-            <label for="modal">
-            </label>
-        </div>
-        <p>Content for the modal</p>
-    </div> -->
 </body>
 </html>
 

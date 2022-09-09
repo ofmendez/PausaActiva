@@ -43,7 +43,14 @@ export function AnimateWithTransparent(el1, el2, interval) {
     }, interval*4);
 }
 
-export function emailToId(email) {
-    return email.replace(/@/g, ' at ').replace(/[^a-z0-9-]+/gi, '-').replace(/^-|-$/g, '');
+export function nameToId(email) {
+    return email.replace(/@/g, ' at ').replace(/[^a-z0-9-]+/gi, '-').replace(/^-|-$/g, '')+"-RDS";
 }
 
+export function ñ(el) {
+    switch (el.charAt(0)) {
+        case "#":  return document.querySelector(el)
+        case ".":  return document.querySelectorAll(el)
+        default:   return document.getElementsByTagName(el)
+    }
+}

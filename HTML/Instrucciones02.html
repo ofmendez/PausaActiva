@@ -1,23 +1,37 @@
-<img src="Images/Fondo.jpg" id="background-video" alt="">
-
-<div class="ImagenLogoSuperior">
-   <img src="Images/Logo.svg" />
+<div id="background-video"></div>
+<div
+   style="padding: 2vh; background-color:#4b4e55; border-bottom-left-radius: 150px 150px;border-bottom-right-radius: 150px 150px;"
+   class="ImagenLogoSuperior">
+   <img width="1080" height="60" src="Images/LogoRDS.svg" />
 </div>
 <div class="CuerpoContenido">
-   <div style="height:2vh;"></div>
-   <p class="TextoParrafo" style="text-align:justify;">Contra cada amenaza tienes 1 minuto para responder y proteger la nave, tendrás la opción de utilizar un antivirus que
-   eliminará dos respuestas incorrectas, esto te ayudará a salir de apuros.</p>
-   <div style="height:2vh;"></div>
-   <p class="TextoParrafo" style="text-align:justify;">¡Al tener varias respuestas correctas consecutivas conseguirás un multiplicador que incrementará tu puntaje!</p>
-   <div style="height:2vh;"></div>
-   <p class="TextoParrafo" style="text-align:justify;">Si no logras proteger el barco de tres amenazas la partida finalizará.</p>
-   <div style="height:2vh;"></div>
+   <div style="height:6vh;"></div>
+   <p class="TextoParrafo" style="text-align:justify;">
+      Cada pregunta es amigablemente difícil pero tendrás 10 segundos para responder.
+   </p>
+   <div style="height:3vh;"></div>
+   <p class="TextoParrafo" style="text-align:justify;">
+      En solo UNA de las preguntas (la pregunta que quieras) podrás usar el escudo verde de ayuda.
+   </p>
+   <!-- <div style="height:3vh;"></div> -->
+   <p class="TextoParrafo" style="text-align:justify;">
+      Éste escudo te sacará de apuros elimiando 2 respuestas incorrectas.</p>
+   </p>
+   <div style="height:3vh;"></div>
+   <p class="TextoParrafo" style="text-align:justify;">
+      En cada pregunta la persona con menos puntos tendrá que sugerir una corta actividad para la pausa activa.
+   </p>
+   <div style="height:3vh;"></div>
+   <p class="TextoParrafo" style="text-align:justify;">
+      El mayor puntaje TOTAL del juego ganará la oportunidad de elegir una actividad de estiramiento que realizará Fabian solito.
+   </p>
+   <div style="height:4vh;"></div>
    <div class="ContenidoColumnas">
       <div class="ColumnaFlex Columna20Porciento">
          <img src="Images/TiempoIcono.svg" />
       </div>
       <div class="ColumnaFlex Columna80Porciento">
-         <p class="TextosSubtitulos" style="text-align:left;">60 SEGUNDOS</p>
+         <p class="TextosSubtitulos" style="text-align:left;">10 SEGUNDOS</p>
          <p class="TextoParrafo" style="text-align:left;">(Para responder cada pregunta)</p>
       </div>
    </div>
@@ -27,24 +41,14 @@
          <img src="Images/IconoAntivirus.svg" />
       </div>
       <div class="ColumnaFlex Columna80Porciento">
-         <p class="TextosSubtitulos" style="text-align:left;">ANTIVIRUS</p>
-         <p class="TextoParrafo" style="text-align:left;">(Permitido solo una vez)</p>
+         <p class="TextosSubtitulos" style="text-align:left;">AYUDA</p>
+         <p class="TextoParrafo" style="text-align:left;">(Permitida solo una vez)</p>
       </div>
    </div>
    <div style="height:1vh;"></div>
-   <div class="ContenidoColumnas">
-      <div class="ColumnaFlex Columna20Porciento">
-         <img src="Images/IconoTurbox2.svg" />
-      </div>
-      <div class="ColumnaFlex Columna80Porciento">
-         <p class="TextosSubtitulos" style="text-align:left;">TURBO! MULTIPLICADOR DE PUNTAJE</p>
-         <p class="TextoParrafo" style="text-align:left;">(Automáticamente cuando aciertas varias veces consecutivas)
-         </p>
-      </div>
-   </div>
    <p>
-   <div style="position:absolute; bottom: 10vh; left:0; width:100%; ">
-      <a class="BotonGradiente" style="width:60%;" href="javascript:GoToLobby()">Comenzar</a>
+   <div hidden id="initHidden" style="position:absolute; bottom: 10vh; left:0; width:100%; ">
+      <a  class="BotonGradiente" style="width:60%;" href="javascript:GoToLobby()">Comenzar</a>
    </div>
    </p>
 </div>

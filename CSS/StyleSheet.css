@@ -62,12 +62,21 @@ option{
 	position: fixed;
 	left: 0;
 	right: 0;
-	top: 2px;
+	/* top: 2px; */
 	bottom: 0;
 	z-index: -1;
 }
+.background-videoPausa {
+	background-image: url("/Images/pausa.webp");
+	background-size: 50%;
+	background-position: center ;
+	background-repeat: no-repeat;
+	/* padding: 0 10%; */
+}
 
 .Content {
+	background-color: #33373f;
+
 	margin: 0 auto;
 	display: block;
 	position: relative;
@@ -87,6 +96,13 @@ option{
 	width: 100%;
 	align-items: center;
 	justify-content: center;
+}
+.CuerpoContenidoConFondo {
+	background-image: url("/Images/pausa.webp");
+	background-size: 50%;
+	background-position: center 80%;
+	background-repeat: no-repeat;
+	padding: 0 10%;
 }
 .CuerpoContenido {
 	padding: 0 10%;
@@ -140,8 +156,8 @@ option{
 	text-align: center;
 	transition: 0.5s;
 	background-size: 200% auto;
-	background-image: linear-gradient(#ffaa2a 0%, #ff3800 100%);
-	border: 5px solid #ffc75c;
+	background-image: linear-gradient(#eb919a 0%, #d04755 100%);
+	border: 5px solid #eb919a;
 	color: #fff;
 	width: 80%;
 	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -167,12 +183,12 @@ option{
 }
 input, .Desplegable {
 	border: 0.5vh solid white;
-	background-color: #ffffff52;
-	border-radius: 50px;
 	padding-left: 2vh;    
 	padding-right: 2vh;   
 	height:7vh;
 	width: 87%;
+	background-image: linear-gradient(#33373e 0%, #d04755 100%);
+	border-radius: 10px;
 }
 ::placeholder, 
 input[type="text"],
@@ -211,8 +227,8 @@ select {
 	padding: 1vh 2vh;
 	text-align: center;
 	background-size: 200% auto;
-	background-image: linear-gradient(#ffaa2a 0%, #ff3800 100%);
-	border: 5px solid #ffc75c;
+	background-image: linear-gradient(#eb919a 0%, #d04755 100%);
+	border: 5px solid #eb919a;
 	color: #fff;
 	border-radius: 100px;
 }
