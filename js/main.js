@@ -29,7 +29,7 @@ views.GoTo("Registro")
 // GoRanking()
 
 
-let socket = new WebSocket("wss://rds-la.com:8888/");
+let socket = new WebSocket("ws://rds-la.com:8888/");
 // let socket = new WebSocket("ws://localhost:8888/");
 
 
